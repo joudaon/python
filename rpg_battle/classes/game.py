@@ -24,9 +24,15 @@ class Person:
     self.actions = ["Attack", "Magic", "Items"]
 
   def generate_damage(self):
+    """
+    Generates damage to the Person.
+    """
     return random.randrange(self.atkl, self.atkh)
 
   def take_damage(self, dmg):
+    """
+    Gets damage from another person.
+    """
     self.hp -= dmg
     if self.hp < 0:
       self.hp = 0
@@ -70,5 +76,5 @@ class Person:
     i = 1
     print("\n" + bcolors.OKGREEN + bcolors.BOLD + "ITEMS:" + bcolors.ENDC)
     for item in self.items:
-      print("    " + str(i) + ".", item.name, ":", item.description, " (x5)")
+      print("    " + str(i) + ".", item["item"].name, ":", item["item"].description, " (x" + str(item["quantity"]) + ")")
       i += 1
