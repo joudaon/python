@@ -47,8 +47,9 @@ while running:
   for player in players:
     player.get_stats()
     
-    print("\n")
+  print("\n")
 
+  for player in players:
     player.choose_action()
     choice = input("    Choose action: ")
     index = int(choice) - 1
