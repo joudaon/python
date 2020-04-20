@@ -2,6 +2,15 @@
 
 No interface video game
 
+## Using requirements file
+
+```sh
+# Getting used pip packages list
+$> pip freeze > requirements.txt
+# Installing used pip packages list
+$> pip install -r requirements.txt
+```
+
 ## Running with docker
 
 ```sh
